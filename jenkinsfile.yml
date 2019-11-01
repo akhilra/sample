@@ -1,0 +1,11 @@
+job:
+  name: MyFirstYAMLJob
+  vm-template: Basic Build VM Template
+  git:
+  - url: "https://github.com/akhilra/sample.git"
+    branch: master
+    repo-name: origin
+  steps:
+  - shell:
+      script: "echo Build Number: $BUILD_NUMBER"
+      
