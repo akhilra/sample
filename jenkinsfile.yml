@@ -1,6 +1,4 @@
-job:
-  name: MyFirstYAMLJob
-  vm-template: Basic Build VM Template
+
   git:
   - url: "https://github.com/akhilra/sample.git"
     branch: master
