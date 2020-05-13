@@ -17,5 +17,5 @@ git add -A
 git commit -m "version $version"
 git tag -a "$version" -m "version $version"
 git push
-git push --tags https://github.com/akhilra/sample.git
+git push --tags origin master
 docker tag $USERNAME/$IMAGE:latest $USERNAME/$IMAGE:$version
