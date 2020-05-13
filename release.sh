@@ -5,7 +5,7 @@ USERNAME=akhilra
 # image name
 IMAGE=helloworld
 # ensure we're up to date
-git pull https://github.com/akhilra/sample.git
+git pull origin master
 # bump version
 docker run --rm -v "$PWD":/app treeder/bump patch
 version=`cat VERSION`
@@ -17,5 +17,5 @@ git add -A
 git commit -m "version $version"
 git tag -a "$version" -m "version $version"
 git push --set-upstream origin master
-git --tags
+git push --tags
 docker tag $USERNAME/$IMAGE:latest $USERNAME/$IMAGE:$version
