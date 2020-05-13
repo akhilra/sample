@@ -16,6 +16,6 @@ echo "version: $version"
 git add -A
 git commit -m "version $version"
 git tag -a "$version" -m "version $version"
-git push
-git push --tags --set-upstream origin master
+git push --set-upstream origin master
+git --tags
 docker tag $USERNAME/$IMAGE:latest $USERNAME/$IMAGE:$version
