@@ -7,7 +7,8 @@ IMAGE=helloworld
 # ensure we're up to date
 git pull origin master
 # bump version
-docker run --rm -v "$PWD":/app treeder/bump patch
+#docker run --rm -v "$PWD":/app treeder/bump patch
+./test.sh
 version=`cat VERSION`
 echo "version: $version"
 # run build
